@@ -1,0 +1,158 @@
+<!Docktype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Form Page</title>
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <style>
+            :root{
+                --color-darkblue-alpha:rgba(27, 27, 50, 0.8);
+            }
+            body{
+                background: linear-gradient(45deg, #A9A9A9, #D3D3D3, rgb(240, 240, 255));
+                font-family: cursive;
+                max-width: 100%;
+                max-height: auto;
+            }
+            h1{
+                font-size: 45px;
+                font-weight: bold;
+            }
+            p {
+                margin-top: 0;
+                margin-bottom: 1rem;
+                text-align: justify;
+            }
+            .container{
+                margin: 0 auto;
+                width: 80%;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #212529;
+                text-align: left;
+                background-color: #fff;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            .header{
+                display: block;
+                padding: 0.5rem 1.5rem;
+                margin-bottom: 0;
+                font-size: 0.875rem;
+                color: #6c757d;
+                white-space: nowrap; 
+            }
+            .form-group {
+                margin: 0 auto 1.25rem auto;
+                padding: 0.25rem;
+                color: aliceblue;
+                display: block;
+            }
+            .sub-form{
+                width: 80%;
+                height: 3.25rem;
+                margin: 5px;
+                border-radius: 7px;
+            }
+            .label{
+                max-width: 100vw;
+                margin: 5px;
+                display: block;
+            }
+            #title{
+                margin: auto 0;
+                text-align: center;
+                text-transform: capitalize;
+            }
+            #description{
+                margin: auto 0;
+                text-align: center;
+            }
+            #survey-form{
+                display: block;
+                background: var(--color-darkblue-alpha);
+                padding: 2.5rem 0.625rem;
+                border-radius: 0.25rem;
+                max-width: 100%;
+                max-height: auto;
+                color: #495057;
+            }
+            .button{
+                background: teal;
+                width: 7.5rem;
+                height: 3rem;
+                margin: 7px;
+                padding: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+                cursor: pointer;
+            }
+            .button: hover {
+                background-color: aqua;
+                box-shadow: 5px 10px red;
+                
+            }
+        </style>
+    </head>
+    <body>
+       <div class="container">
+          <div class="header">
+                      <h1 id="title">My Survey Form</h1>
+                      <p id="description">Thank you for taking the time to help us improve the platform</p>
+           
+            </div>
+            <form id="survey-form">
+               <div class="form-group">
+                    <label for="name" class="label">Name:</label>
+                    <input type="text" id="name-label" name="name" placeholder="Write your fullname" class="sub-form" minlength="5" required>
+                </div>
+                <div class="form-group">
+                <label for="email" class="label">Email:</label>
+                <input type="text" id="email-label" name="email" placeholder="you@you.com" class="sub-form" required>
+                </div>
+                <div class="form-group">
+                <label for="number" class="label">Number:</label>
+                <input type="number" id="number-label" name="number" placeholder="12345678" class="sub-form" max="11">
+                </div>
+                <div class="form-group">
+                <label for="expertice" class="label">Please select your expertice</label>
+                    <select id="dropdown" name="dropdown" class="sub-form" required>
+                       <option disabled="" selected="" value="">Select current status</option>
+                        <option value="newbie">Newbie</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="professional">Professional</option>
+                        <option value="geek">Geek</option>
+                    </select>
+                    
+                </div>
+                <div class="form-group">
+                   <label for="gender" class="label">Sex Orientation</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female" checked>
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+                <div class="form-group">
+                   <label for="programs" class="label">Programming Language you are interested in</label>
+                    <input type="checkbox" id="programs1" name="programs" value="JavaScript">
+                    <label for="programs1"> JavaScript</label><br>
+                    <input type="checkbox" id="programs2" name="programs" value="python">
+                    <label for="programs2"> Python</label><br>
+                    <input type="checkbox" id="programs3" name="programs" value="cc" checked>
+                    <label for="programs3"> CC</label>
+                </div>
+                <div class="form-group">
+                    <label for="additional" class="label">Additional Comment</label>
+                    <textarea name="comment" form="user-comment" rows="7" cols="70">Enter your comment here......</textarea>
+                </div>
+                <input type="submit" value="submit" class="button">
+            </form>
+       </div>
+    </body>
+    
+</html>
